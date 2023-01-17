@@ -20,6 +20,17 @@
       <nav class="nav">
         <a href="./index.html" title="Web Studio" class="link"><span class="logo">Web</span><span
             class="accent">Studio</span></a>
+        <button class="menu-button is-open" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg class="menu-svg" width="32" height="22" aria-label="mobile menu">
+            <use class="menu-icon" href="./image/symbol-defs.svg#icon-menu-hamburger"></use>
+            <use class="menu-close" href="./image/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+          <div class="navigation"></div>
+          <div class="contacts"></div>
+          <div class="menu-smm"></div>
+        </div>
         <ul class="site-nav list">
           <li class="current item"> <a href="./index.html" title="_blank" class="menu link"> Studio </a> </li>
           <li class="item"> <a href="./portfolio.html" title="_blank" class="menu link"> Portfolio </a> </li>
@@ -112,7 +123,7 @@
       <div class="container">
         <h2 class="section-title"> Our Team </h2>
         <ul class="our-team list">
-          <li class="item">
+          <li class="team-item">
             <img class="image" src="./image/Mark-Guerrero.jpg" alt="photo Mark Guerrero" width="264" height="260">
             <div class="team-name">
               <p class="section-header">Mark Guerrero</p>
@@ -151,7 +162,7 @@
               </div>
             </div>
           </li>
-          <li class="item">
+          <li class="team-item">
             <img class="image" src="./image/Tom-Ford.jpg" alt="photo Tom Ford" width="264" height="260">
             <div class="team-name">
               <p class="section-header">Tom Ford</p>
@@ -190,7 +201,7 @@
               </div>
             </div>
           </li>
-          <li class="item">
+          <li class="team-item">
             <img class="image" src="./image/Camila-Garcia.jpg" alt="photo Camila Garcia" width="264" height="260">
             <div class="team-name">
               <p class="section-header">Camila Garcia</p>
@@ -229,7 +240,7 @@
               </div>
             </div>
           </li>
-          <li class="item">
+          <li class="team-item">
             <img class="image" src="./image/Daniel-Wilson.jpg" alt="photo Daniel Wilson" width="264" height="260">
             <div class="team-name">
               <p class="section-header">Daniel Wilson</p>
@@ -435,6 +446,7 @@
   </div>
 
   <script src="./js/modal.js"></script>
+  <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
