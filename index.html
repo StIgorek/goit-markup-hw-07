@@ -18,29 +18,64 @@
   <header class="page-header">
     <div class="header container">
       <nav class="nav">
-        <a href="./index.html" title="Web Studio" class="link"><span class="logo">Web</span><span
+        <a href="./index.html" title="Web Studio" class="link"><span class="logo ">Web</span><span
             class="accent">Studio</span></a>
-        <button class="menu-button is-open" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-          <svg class="menu-svg" width="32" height="22" aria-label="mobile menu">
-            <use class="menu-icon" href="./image/symbol-defs.svg#icon-menu-hamburger"></use>
-            <use class="menu-close" href="./image/symbol-defs.svg#icon-close"></use>
+        <button class="menu-button" type="button" data-menu-open>
+          <svg class="menu-hamburher" width="32" height="22">
+            <use href="./images/symbol-defs.svg#icon-menu-hamburger"></use>
           </svg>
         </button>
-        <div class="menu-container is-open" id="menu-container" data-menu>
-          <div class="navigation"></div>
-          <div class="contacts"></div>
-          <div class="menu-smm"></div>
+        <div class="mobile-menu is-open" data-menu>
+          <div class="menu-container">
+            <button class="close-button" type="button" data-menu-close>
+              <svg class="close-svg">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+            <ul class="site-nav list">
+              <li class="current item"> <a href="./index.html" title="_blank" class="menu link"> Studio </a> </li>
+              <li class="item"> <a href="./portfolio.html" title="_blank" class="menu link"> Portfolio </a> </li>
+              <li class="item"> <a href="" title="_blank" class="menu link"> Contacts </a> </li>
+            </ul>
+            <div class="contacts-menu">
+              <ul class="contact list">
+                <li class="contact-item"> <a href="tel:+110001111111" class="link"> +11 (000) 111-11-11 </a></li>
+                <li class="contact-item"> <a href="mailto:info@devstudio.com" class="link"> info@devstudio.com </a></li>
+              </ul>
+              <ul class="menu-smm list">
+                <li class="smm-container">
+                  <a class="smm-icon" href="" title="_blank">
+                    <svg class="smm-icon-size">
+                      <use href="./image/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="smm-container">
+                  <a class="smm-icon" href="" title="_blank">
+                    <svg class="smm-icon-size">
+                      <use href="./image/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="smm-container">
+                  <a class="smm-icon" href="" title="_blank">
+                    <svg class="smm-icon-size">
+                      <use href="./image/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="smm-container">
+                  <a class="smm-icon" href="" title="_blank">
+                    <svg class="smm-icon-size">
+                      <use href="./image/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <ul class="site-nav list">
-          <li class="current item"> <a href="./index.html" title="_blank" class="menu link"> Studio </a> </li>
-          <li class="item"> <a href="./portfolio.html" title="_blank" class="menu link"> Portfolio </a> </li>
-          <li class="item"> <a href="" title="_blank" class="menu link"> Contacts </a> </li>
-        </ul>
       </nav>
-      <ul class="contact list">
-        <li class="item"> <a href="mailto:info@devstudio.com" class="link"> info@devstudio.com </a></li>
-        <li class="item"> <a href="tel:+110001111111" class="link"> +11 (000) 111-11-11 </a></li>
-      </ul>
     </div>
   </header>
 
@@ -393,8 +428,8 @@
   
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button class="modal-btn" data-modal-close>
-        <svg class="modal-svg">
+      <button class="close-button" data-modal-close>
+        <svg class="close-svg">
           <use href="./image/symbol-defs.svg#icon-close"></use>
         </svg>
       </button>
