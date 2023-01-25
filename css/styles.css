@@ -112,6 +112,7 @@ ul {
   }
 
 /*___________ header ____________*/
+
 .page-header {
   background-color: var(--primary-bg-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -147,9 +148,17 @@ ul {
 }
 
 @media screen and (max-width: 767px) {
+.section-title, .section-header {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.11;
+  text-align: center;
+}
+
 .site-nav, .contacts-menu {
   display: none;
 }
+
 .mobile-menu {
   width: 100%;
   height: 100%;
@@ -282,8 +291,299 @@ margin-top: 48px;
   width: 24px;
   height: 24px;
 }
+
+/*_____________ Advantages _______________*/
+.advntgs {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  width: 396px;
+  margin: 0 auto;
 }
 
+.advantages-item:not(:last-child) {
+  margin-bottom: 72px;
+}
+
+.advantages-icon {
+  display: none;
+}
+.section-header {
+  margin-bottom: 8px;
+}
+.advantages-item p {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/*_____________ What are We doing _______________*/
+.we {
+  display: none;
+}
+
+
+/*______________ Our Team ______________________*/
+.team {
+  background-color: #F4F4FD;
+  padding-top: 96px;
+}
+.our-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 264px;
+  margin-left:  auto;
+  margin-right: auto;
+  padding-top: 96px;
+}
+
+.team-item {
+  padding-bottom: 72px;
+}
+
+.team-name {
+  background-color: var(--primary-bg-color);
+  padding: 32px 14px;
+  text-align: center;
+}
+
+.team-name .section-header {
+  font-size: 20px;
+  line-height: 1.2;
+}
+.team-smm {
+  display: flex;
+  width: 232px;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.smm-icon-size {
+  width: 16px;
+  height: 16px;
+}
+
+/*______________ Customers __________*/
+ .customer {
+  width: 396px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  margin: 0 auto;
+ }
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 72px;
+}
+
+.customers-item {
+  width: 190px;
+  height: 88px;
+  border-radius: 4px;
+  margin-bottom: 72px;
+}
+.customers-item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
+.company {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8E8F99;
+  border: 1px solid #8E8F99;
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
+}
+
+.company:hover,
+.company:focus {
+  border: 1px solid var(--hover-color);
+  color: var(--hover-color);
+  transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
+}
+
+.client {
+  width: 104px;
+  height: 56px;
+  fill: currentColor;
+  transition: fill 250ms var(--timing-function);
+}
+
+.client:hover,
+.client:focus {
+  fill: var(--hover-color);
+  transition: fill 250ms var(--timing-function);
+}
+
+/*_____________ Footer _____________*/
+.footer {
+  background-color: var(--title-text-color);
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.ftr {
+  text-align: center;
+}
+
+
+.footer-text-box {
+  width: 268px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  display: block;
+  width: 264px;
+  margin-top: 16px;
+}
+
+.footer-text {
+  color: var(--accent-color);
+}
+
+.footer-logo {
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-brand-color);
+}
+
+.footer-accent {
+  color: #F4F4FD;
+  font-family: Raleway;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-social {
+  width: 208px;
+  height: 80px;
+  color: var(--primary-bg-color);
+  text-align: center;
+  margin: 72px auto;
+}
+
+.social-box {
+  width: 208px;
+  height: 40px;
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.social {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.social:hover,
+.social:focus {
+  background-color: #31D0AA;
+  border-radius: 50%;
+  transition: background-color 250ms var(--timing-function);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  width: 396px;
+  color: var(--primary-bg-color);
+}
+
+.subscribe-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2.0;
+  letter-spacing: 0.04em;
+}
+.subscribe-box input {
+  width: 100%;
+   margin-top: 16px;
+   margin-bottom: 16px;
+}
+
+.subscribe-box .main-button {
+  margin: 0;
+  width: 168px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-box input {
+  width: 264px;
+  height: 40px;
+  background-color: var(--title-text-color);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  color: #FFFFFF;
+}
+
+.subscribe-box+input {
+  font-family: roboto, sans-serif;
+}
+
+.subscribe-box~input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: roboto, sans-serif;
+}
+
+.subscribe-box~.main-button {
+  width: 168px;
+  height: 40px;
+}
+
+.subscribe-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+}
 
 /*---------TABLET-------------*/
 
@@ -564,6 +864,7 @@ margin-top: 48px;
   border-radius: 0px 0px 4px 4px;
 }
 
+/* ДУБЛЬ з МОБІЛЕ
 .team-smm {
   display: flex;
   width: 232px;
@@ -577,7 +878,7 @@ margin-top: 48px;
   width: 16px;
   height: 16px;
 }
-
+*/
 
 .customer {
   padding-top: 120px;
@@ -602,7 +903,7 @@ margin-top: 48px;
   margin-right: 24px;
 }
 
-.company {
+/*.company {
   width: 100%;
   height: 100%;
   display: flex;
@@ -631,10 +932,10 @@ margin-top: 48px;
 .client:focus {
   fill: var(--hover-color);
   transition: fill 250ms var(--timing-function);
-}
+}*/
 
 /*Footer*/
-.footer {
+/*.footer {
   background-color: var(--title-text-color);
   padding-top: 100px;
   padding-bottom: 100px;
@@ -793,7 +1094,7 @@ margin-top: 48px;
   width: 24px;
   height: 24px;
   margin-left: 16px;
-}
+}*/
 }
 
 /* Portfolio Page */
