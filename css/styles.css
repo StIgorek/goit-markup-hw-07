@@ -28,7 +28,6 @@ ul {
   padding: 0;
 }
 
-
 .main-button,
 .button {
   cursor: pointer;
@@ -57,6 +56,12 @@ ul {
   padding: 0px 16px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .close-button {
@@ -95,11 +100,37 @@ ul {
   transition: fill 250ms var(--timing-function);
 }
 
-  @media screen and (min-width: 480px) {
-    .container {
-      width: 428px;
-    }
-  }
+.main-button {
+  background-color: var(--primary-brand-color);
+  color: var(--primary-bg-color);
+  border-color: var(--primary-brand-color);
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+
+  display: inline-block;
+  min-width: 170px;
+  padding: 16px 32px;
+  border-radius: 4px;
+  margin-top: 48px;
+  transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
+}
+
+.main-button:hover,
+.main-button:focus {
+  background-color: var(--hover-color);
+  border-color: var(--hover-color);
+  color: var(--primary-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
+}
+
+.main-button:active {
+  background-color: #404BBF;
+  color: var(--primary-bg-color);
+}
+
   @media screen and (min-width: 768px) {
     .container {
       width: 768px;
@@ -147,17 +178,63 @@ ul {
   text-transform: uppercase;
 }
 
+/*____________ Main section _______________*/
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+   width: 100%;
+}
+
+.main-section {
+  background-color: var(--title-text-color);
+  text-align: center;
+  padding-top: 112px;
+  padding-bottom: 109px;
+
+  background-image:
+    url(../image/dark-bg.png), url("../image/header-bgi.jpg");
+  max-width: 1440px;
+  height: 432px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--title-text-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.11;
+  color: var(--primary-bg-color);
+  max-width: 317px;
+  text-align: center;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+  }
+}
+
 @media screen and (max-width: 767px) {
-.section-title, .section-header {
+.site-nav, .contacts-menu {
+  display: none;
+}
+
+.section-title,
+.section-header {
   font-size: 36px;
   font-weight: 600;
   line-height: 1.11;
   text-align: center;
 }
 
-.site-nav, .contacts-menu {
-  display: none;
-}
+/*___________ Mobile Menu ________________*/
 
 .mobile-menu {
   width: 100%;
@@ -173,8 +250,8 @@ ul {
 
 .menu-button {
   background-color: transparent;
-  line-height: 0;
-  padding: 0;
+  /*line-height: 0;
+  padding: 0;*/
   border: 1px solid tomato;
 }
 
@@ -188,7 +265,6 @@ ul {
   opacity: 0;
   visibility: hidden;
   pointer-events: auto;
-
   background-color: var(--primary-bg-color);
 }
 
@@ -200,7 +276,6 @@ ul {
 
 .menu-container {
   position: relative;
-
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -319,7 +394,7 @@ margin-top: 48px;
 .we {
   display: none;
 }
-
+}
 
 /*______________ Our Team ______________________*/
 .team {
@@ -366,8 +441,9 @@ margin-top: 48px;
 }
 
 /*______________ Customers __________*/
- .customer {
-  width: 396px;
+ @media screen and (max-width:767px) {
+.customer {
+  max-width: 396px;
   padding-top: 96px;
   padding-bottom: 96px;
   margin: 0 auto;
@@ -381,13 +457,16 @@ margin-top: 48px;
 }
 
 .customers-item {
-  width: 190px;
   height: 88px;
   border-radius: 4px;
+  flex-basis: calc((100% - 16px) / 2);
+  gap: 16px;
   margin-bottom: 72px;
 }
+
 .customers-item:nth-last-child(-n+2) {
   margin-bottom: 0;
+}
 }
 
 .company {
@@ -434,13 +513,13 @@ margin-top: 48px;
 
 
 .footer-text-box {
-  width: 268px;
+  max-width: 268px;
   margin: 0 auto;
 }
 
 .footer-text {
   display: block;
-  width: 264px;
+  max-width: 264px;
   margin-top: 16px;
 }
 
@@ -469,7 +548,7 @@ margin-top: 48px;
 }
 
 .footer-social {
-  width: 208px;
+  max-width: 208px;
   height: 80px;
   color: var(--primary-bg-color);
   text-align: center;
@@ -477,7 +556,7 @@ margin-top: 48px;
 }
 
 .social-box {
-  width: 208px;
+  max-width: 208px;
   height: 40px;
   margin-top: 16px;
 
@@ -527,44 +606,37 @@ margin-top: 48px;
 .subscribe {
   display: flex;
   flex-direction: column;
-  width: 396px;
+  max-width: 396px;
   color: var(--primary-bg-color);
+  margin: 0 auto;
 }
 
 .subscribe-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   line-height: 2.0;
   letter-spacing: 0.04em;
-}
-.subscribe-box input {
-  width: 100%;
-   margin-top: 16px;
-   margin-bottom: 16px;
+  max-width: 396px;
+  text-align: center;
 }
 
 .subscribe-box .main-button {
   margin: 0;
-  width: 168px;
+  max-width: 168px;
   height: 40px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }
 
 .subscribe-box input {
-  width: 264px;
+  width: 100%;
   height: 40px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   background-color: var(--title-text-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding-left: 16px;
   color: #FFFFFF;
-}
-
-.subscribe-box+input {
-  font-family: roboto, sans-serif;
 }
 
 .subscribe-box~input::placeholder {
@@ -573,7 +645,7 @@ margin-top: 48px;
 }
 
 .subscribe-box~.main-button {
-  width: 168px;
+  max-width: 168px;
   height: 40px;
 }
 
@@ -583,7 +655,6 @@ margin-top: 48px;
   margin-left: 16px;
 }
 
-}
 
 /*---------TABLET-------------*/
 
@@ -591,9 +662,6 @@ margin-top: 48px;
   .header {
     display: flex;
   }
-}
-
-@media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
@@ -690,32 +758,8 @@ margin-top: 48px;
 .contact .item+.item {
   margin-left: 149px;
 }
-
-/* Main section*/
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .main-section {
-  background-color: var(--title-text-color);
-  text-align: center;
-  padding-bottom: 192px;
-  padding-top: 192px;
-
-  background-image:
-    url(../image/dark-bg.png), url("../image/header-bgi.jpg");
-  max-width: 1440px;
   height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--title-text-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .main-title {
@@ -725,37 +769,6 @@ margin-top: 48px;
   color: var(--primary-bg-color);
   width: 492px;
   text-align: center;
-}
-
-.main-button {
-  background-color: var(--primary-brand-color);
-  color: var(--primary-bg-color);
-  border-color: var(--primary-brand-color);
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.19;
-  letter-spacing: 0.04em;
-
-  display: inline-block;
-  min-width: 170px;
-  padding: 16px 32px;
-  border-radius: 4px;
-  margin-top: 48px;
-  transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
-}
-
-.main-button:hover,
-.main-button:focus {
-  background-color: var(--hover-color);
-  border-color: var(--hover-color);
-  color: var(--primary-bg-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms var(--timing-function), border-color 250ms var(--timing-function);
-}
-
-.main-button:active {
-  background-color: #404BBF;
-  color: var(--primary-bg-color);
 }
 
 /*other section*/
@@ -1097,7 +1110,7 @@ margin-top: 48px;
 }*/
 }
 
-/* Portfolio Page */
+/*________________ Portfolio Page _________________*/
 .portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -1216,10 +1229,6 @@ margin-top: 48px;
   transition: box-shadow 250ms var(--timing-function);
 }
 
-.image {
-  display: block;
-}
-
 .p-div {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -1235,7 +1244,7 @@ margin-top: 48px;
 }
 
 
-/* BACKDROP & MODAL FORM */
+/* __________ BACKDROP & MODAL FORM ____________*/
 
 .backdrop {
   position: fixed;
