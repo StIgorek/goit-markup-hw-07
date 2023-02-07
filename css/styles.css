@@ -622,6 +622,7 @@ margin-top: 48px;
   height: 40px;
   margin-top: 16px;
   margin-bottom: 16px;
+  padding-left: 16px;
   background-color: var(--title-text-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -703,8 +704,8 @@ margin-top: 48px;
 
   .site-nav .link {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 23px;
+    padding-bottom: 23px;
   }
 
   .site-nav .item:not(:last-child) {
@@ -986,8 +987,8 @@ margin-top: 48px;
   .site-nav .link,
   .contact .link {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 23px;
+    padding-bottom: 23px;
   }
 
   .site-nav .item:not(:last-child) {
@@ -1267,7 +1268,6 @@ margin-top: 48px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    padding-left: 16px;
     color: #FFFFFF;
   }
 
@@ -1318,9 +1318,12 @@ margin-top: 48px;
   border-radius: 4px;
 }
 
-@media screen and (max-width: 767.9px) {
+
+
+@media screen and (min-width: 480px) and (max-width: 767.9px) {
   .modal {
     width: 392px;
+   top: 300px;
   }
 }
 
@@ -1482,6 +1485,23 @@ margin-top: 48px;
 
 .modal-button .main-button {
   margin: 0;
+}
+
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 90%;
+  }
+
+  .form-field {
+    width: 100%;
+  }
+
+  .form-input, .textarea {
+    width: 100%;
+  }
+  .form-checkbox {
+    width: 100%;
+  }
 }
 
 /*________________ Portfolio Page _________________*/
