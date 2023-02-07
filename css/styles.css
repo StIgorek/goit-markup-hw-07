@@ -53,6 +53,7 @@ ul {
 }
 
 .container {
+  width: 396px;
   padding: 0px 15px;
   margin-left: auto;
   margin-right: auto;
@@ -139,7 +140,7 @@ ul {
   text-align: center;
   padding-top: 112px;
   padding-bottom: 109px;
-  width: 100%;
+  width: 396px;
   background-image:
     url("../image/hero/mobile-bg.png"), url("../image/hero/mobile-bgi.jpg");
   /*max-width: 767px;*/
@@ -276,12 +277,6 @@ margin-top: 48px;
   height: 24px;
 }
 
-@media screen and (min-width: 480px) {
-  .container {
-      width: 428px;
-    }
-}
-
 @media screen and (max-width: 767.9px) {
   .site-nav,
   .contacts-menu {
@@ -393,6 +388,7 @@ margin-top: 48px;
 
 /*______________ Our Team ______________________*/
 .team {
+  width: 396px;
   background-color: #F4F4FD;
   padding-top: 96px;
   margin: 0 auto;
@@ -497,6 +493,7 @@ margin-top: 48px;
 
 /*_____________ Footer _____________*/
 .footer {
+  width: 396px;
   background-color: var(--title-text-color);
   padding-top: 96px;
   padding-bottom: 96px;
@@ -618,7 +615,7 @@ margin-top: 48px;
 }
 
 .subscribe-box input {
-  width: 100%;
+  width: 80%;
   height: 40px;
   margin-top: 16px;
   margin-bottom: 16px;
@@ -647,6 +644,22 @@ margin-top: 48px;
   width: 24px;
   height: 24px;
   margin-left: 16px;
+}
+
+@media screen and (min-width: 396px) {
+  .main-section, .team, .footer {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 428px;
+  }
+
+  .subscribe-box input {
+    width: 100%;
+  }
 }
 
 
@@ -800,7 +813,7 @@ margin-top: 48px;
   }
 
   .main-title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 56px;
     line-height: 1.07;
     color: var(--primary-bg-color);
@@ -867,6 +880,7 @@ margin-top: 48px;
     flex-basis: 168px;
     margin-right: 24px;
     margin-bottom: 72px;
+    border-radius: 4px;
   }
 
   .customers-item:nth-child(3n+3) {
@@ -1048,7 +1062,7 @@ margin-top: 48px;
 
 /*_____________ other section ____________*/
   .section-title {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
@@ -1162,7 +1176,6 @@ margin-top: 48px;
   .customers-item {
     width: 168px;
     height: 88px;
-    border-radius: 4px;
     margin-bottom: 0;
   }
 
@@ -1323,7 +1336,7 @@ margin-top: 48px;
 @media screen and (min-width: 480px) and (max-width: 767.9px) {
   .modal {
     width: 392px;
-   top: 300px;
+   /*top: 300px;*/
   }
 }
 
