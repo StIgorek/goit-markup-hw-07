@@ -53,7 +53,7 @@ ul {
 }
 
 .container {
-  width: 396px;
+  max-width: 396px;
   padding: 0px 15px;
   margin-left: auto;
   margin-right: auto;
@@ -140,7 +140,6 @@ ul {
   text-align: center;
   padding-top: 112px;
   padding-bottom: 109px;
-  width: 396px;
   background-image:
     url("../image/hero/mobile-bg.png"), url("../image/hero/mobile-bgi.jpg");
   /*max-width: 767px;*/
@@ -364,7 +363,7 @@ margin-top: 48px;
 /*_____________ Advantages _______________*/
 .advntgs {
   padding-top: 96px;
-  width: 396px;
+  max-width: 396px;
   margin: 0 auto;
 }
 
@@ -388,7 +387,6 @@ margin-top: 48px;
 
 /*______________ Our Team ______________________*/
 .team {
-  width: 396px;
   background-color: #F4F4FD;
   padding-top: 96px;
   margin: 0 auto;
@@ -435,7 +433,7 @@ margin-top: 48px;
 
 /*______________ Customers __________*/
 .customer {
-  width: 396px;
+  max-width: 396px;
   padding-top: 96px;
   padding-bottom: 96px;
   margin: 0 auto;
@@ -493,7 +491,7 @@ margin-top: 48px;
 
 /*_____________ Footer _____________*/
 .footer {
-  width: 396px;
+  max-width: 100%;
   background-color: var(--title-text-color);
   padding-top: 96px;
   padding-bottom: 96px;
@@ -660,7 +658,7 @@ margin-top: 48px;
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 428px;
+    max-width: 428px;
   }
 
   .subscribe-box input {
@@ -673,7 +671,7 @@ margin-top: 48px;
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
   .header {
     display: flex;
@@ -830,14 +828,20 @@ margin-top: 48px;
 
   .advntgs {
     padding-top: 99px;
-    width: 736px;
+    max-width: 736px;
     height: auto;
     margin: 0 auto;
+    
+  }
+
+  .advntgs .container {
+    padding: 0;
   }
 
   .advantages {
     display: flex;
     padding-left: 0;
+    width: 736px;
   }
 
   .advantages-item {
@@ -871,7 +875,7 @@ margin-top: 48px;
 
   .customer, 
   .customer .container, .customers {
-    width: 552px;
+    max-width: 552px;
   }
 
   .customer .container {
@@ -984,7 +988,7 @@ margin-top: 48px;
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1158px;
+    max-width: 1158px;
   }
 
   .mobile-menu {
@@ -1089,7 +1093,7 @@ margin-top: 48px;
 
   .advntgs {
     padding-top: 120px;
-    width: 1128px;
+    max-width: 1128px;
   }
 
   .advantages {
@@ -1164,7 +1168,7 @@ margin-top: 48px;
   .customer,
   .customer .container,
   .customers {
-    width: 1128px;
+    max-width: 1128px;
   }
 
   .customer {
